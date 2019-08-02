@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+/* FONTS */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
+
+
+/* 背景白のheader */
+
+.header {
+  width: 100%;
+  background-color: #fff;
+  padding: 15px 0;
+}
+.inner  {
+  width: 1100px;
+  margin: 0 auto;
+} 
+/* 雷マーク */
+.fas {
+  float:left;
+  /* padding: 15px 0; */
+  font-size: 60px;
+  color: gray;
+}
+/* content */
+.header-contact {
+  float: right;
+  font-size: 12px;
+  padding: 14px 12px;
+  color: #fff;
+  background-color: #74cfae;
+}
+/* float使用のためclearfix */
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+
+
+.title {
+  width: 1100px;
+}
+
+/* Bolt Theme */
+.title-theme {
+  background-color: #f2f2f2;
+  padding-top: 250px;
+  padding-bottom: 250px;
+  margin: 0 auto;
+}
+.title-inner-theme {
+  margin: 0 auto;
+}
+.theme {
+  font-size: 90px;
+  font-weight: 700;
+  color: #74cfae;
+  text-align: center;
+  margin: 0 auto 20px;
+}
+.free {
+  font-size: 30px;
+  color: #c0c0c0;
+  text-align: center;
+}
+
+/* section1 */
+.title-section1 {
+  background-color: #74cfae;
+  padding-top: 50px;
+  margin: 0 auto;
+}
+
+.iphone {
+  float: left;
+}
+
+.section1-text {
+  float: right;
+  width: 800px;
+}
+
+.section1-text h2 {
+  font-size: 24px;
+  text-align: center;
+  padding-bottom:35px;
+  color: #fff;
+}
+.section1-text p {
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+/* images */
+.title-article {
+  background-color: #f2f2f2;
+  padding-top: 60px;
+  padding-bottom: 70px;
+  margin: 0 auto;
+}
+.article-content h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+.images {
+  display: flex;
+  margin: 0 auto;
+}
+.images img {
+  margin-left: 100px;
+  margin-bottom:80px;
+}
+.images img:first-child {
+  margin-left: 0;
+}
+.article-email {
+  float: right;
+  font-size: 12px;
+  text-align: center;
+  padding: 14px 20px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #74cfae;
+  margin-left: 90px;
+  margin-top: 10px;
+}
+.article-content p {
+  margin-top: 10px;
+  display: flex;
+  font-size: 12px;
+  text-align: center;
+}
+
+
+/* circle-images */
+.title-section2 {
+  background-color: #4e4e4e;
+  padding-top: 70px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+}
+.section2-circle h2 {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.images-circle {
+  display: flex;
+}
+.images-circle div {
+  margin-left: 185px;
+}
+.images-circle img {
+  /* zoom: 1.5; */
+  margin-bottom: 20px;
+}
+.images-circle div:first-child {
+  margin-left: 0;
+}
+.images-circle p {
+  font-size: 16px;
+  color: #fff;
+  /* text-align: center; */
+}
+
+
+/* sns */
+.title-sns {
+  background-color: #f2f2f2;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin: 0 auto;
+}
+.sns{
+  display: flex;
+}
+.sns-icon {
+  margin: 0 auto;
+  font-size: 100px;
+  text-align: center;
+  width: 180px;
+  color:#74cfae;
+}
+.sns-icon:hover {
+  background-color: #fff;
+}
+
+
+/* footer */
+.footer {
+  width: 100%;
+  background-color: #74cfae;
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+
+.footer-text {
+  /* float: right; */
+  margin-left: 70%;
+  font-size: 8px;
+  color: #fff;
+}
