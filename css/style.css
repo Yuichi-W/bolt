@@ -8,28 +8,32 @@
 /* 背景白のheader */
 
 .header {
+  position: fixed;
+  top: 0;
   width: 100%;
-  background-color: #fff;
   padding: 15px 0;
-}
-.inner  {
-  width: 1100px;
   margin: 0 auto;
-} 
+  z-index: 1;
+  background-color: #fff;
+}
 /* 雷マーク */
 .fas {
   float:left;
-  /* padding: 15px 0; */
-  font-size: 60px;
   color: gray;
+  font-size: 60px;
 }
 /* content */
 .header-contact {
   float: right;
+  color: #fff;
   font-size: 12px;
   padding: 14px 12px;
-  color: #fff;
   background-color: #74cfae;
+  transition: color .3s ease;
+  cursor: pointer;
+}
+.header-contact:hover {
+  color: #333;
 }
 /* float使用のためclearfix */
 .clearfix::after {
@@ -40,27 +44,28 @@
 
 
 
-
-.title {
+main {
+  width: 100%;
+}
+.inner {
   width: 1100px;
+  margin: 0 auto;
 }
 
 /* Bolt Theme */
-.title-theme {
+.bolt{
   background-color: #f2f2f2;
-  padding-top: 250px;
+}
+.bolt-inner {
+  padding-top: 340px;
   padding-bottom: 250px;
-  margin: 0 auto;
 }
-.title-inner-theme {
-  margin: 0 auto;
-}
-.theme {
+.bolt-text {
   font-size: 90px;
   font-weight: 700;
   color: #74cfae;
+  margin-bottom: 20px;
   text-align: center;
-  margin: 0 auto 20px;
 }
 .free {
   font-size: 30px;
@@ -68,40 +73,37 @@
   text-align: center;
 }
 
-/* section1 */
-.title-section1 {
+/* section-first */
+.section-first {
   background-color: #74cfae;
   padding-top: 50px;
-  margin: 0 auto;
 }
-
 .iphone {
   float: left;
 }
-
-.section1-text {
+.section-first-text {
   float: right;
   width: 800px;
 }
-
-.section1-text h2 {
+.section-first-text h2 {
   font-size: 24px;
   text-align: center;
   padding-bottom:35px;
   color: #fff;
 }
-.section1-text p {
+.section-first-text p {
   font-size: 20px;
   text-align: center;
+  line-height: 40px;
   color: #fff;
+  word-break: break-all;
 }
 
 /* images */
-.title-article {
+.article {
   background-color: #f2f2f2;
   padding-top: 60px;
   padding-bottom: 70px;
-  margin: 0 auto;
 }
 .article-content h2 {
   font-size: 24px;
@@ -113,40 +115,57 @@
   display: flex;
   margin: 0 auto;
 }
+.images {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
 .images img {
   margin-left: 100px;
   margin-bottom:80px;
+  opacity: 0.7;
+  transition: opacity .3s ease;
 }
 .images img:first-child {
   margin-left: 0;
 }
+.images img:nth-child(4n) {
+  margin-left: 0;
+}
+.images img:nth-child(n+4) {
+  margin-bottom: 0;
+}
+.images img:hover {
+  opacity: 1;
+}
+.article-text {
+  margin-top: 90px;
+}
 .article-email {
   float: right;
-  font-size: 12px;
-  text-align: center;
   padding: 14px 20px;
-  box-sizing: border-box;
   color: #fff;
   background-color: #74cfae;
   margin-left: 90px;
-  margin-top: 10px;
+  text-decoration:none;
+  transition: color .3s ease;
+}
+.article-email:hover {
+  color: #333;
 }
 .article-content p {
-  margin-top: 10px;
   display: flex;
-  font-size: 12px;
   text-align: center;
+  word-break: break-all;
 }
 
 
 /* circle-images */
-.title-section2 {
+.section-second {
   background-color: #4e4e4e;
   padding-top: 70px;
   padding-bottom: 100px;
-  margin: 0 auto;
 }
-.section2-circle h2 {
+.section-second-circle h2 {
   font-size: 24px;
   color: #fff;
   text-align: center;
@@ -156,12 +175,13 @@
 .images-circle {
   display: flex;
 }
-.images-circle div {
-  margin-left: 185px;
-}
-.images-circle img {
-  /* zoom: 1.5; */
+.images_img {
+  box-sizing: border-box;
   margin-bottom: 20px;
+}
+.images-circle div {
+  margin-left: 160px;
+  text-align: center;
 }
 .images-circle div:first-child {
   margin-left: 0;
@@ -169,28 +189,31 @@
 .images-circle p {
   font-size: 16px;
   color: #fff;
-  /* text-align: center; */
+  text-align: center;
 }
 
 
 /* sns */
-.title-sns {
+.sns {
   background-color: #f2f2f2;
   padding-top: 200px;
   padding-bottom: 200px;
-  margin: 0 auto;
 }
-.sns{
+.sns-content{
   display: flex;
+  justify-content: center;
 }
 .sns-icon {
-  margin: 0 auto;
-  font-size: 100px;
+  font-size: 50px;
   text-align: center;
-  width: 180px;
+  padding: 30px 0;
+  width: 185px;
   color:#74cfae;
+  opacity: 0.7;
+  transition: background .3s ease;
 }
 .sns-icon:hover {
+  opacity: 1;
   background-color: #fff;
 }
 
@@ -201,11 +224,12 @@
   background-color: #74cfae;
   padding-top: 20px;
   padding-bottom: 25px;
+  margin-bottom: 50px;
 }
 
 .footer-text {
-  /* float: right; */
-  margin-left: 70%;
+  float: right;
+  /* margin-left: 70%; */
   font-size: 8px;
   color: #fff;
 }
