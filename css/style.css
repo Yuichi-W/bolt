@@ -187,7 +187,7 @@ main {
   display: inline-block;
   line-height: 30px;
   text-align: center;
-  word-break: break-all;
+  width: 500px;
 }
 
 .article-email {
