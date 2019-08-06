@@ -1,15 +1,27 @@
 @charset "utf-8";
 
-/* FONTS */
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
-
-
 /* float使用のためclearfix */
 .clearfix::after {
   content: '';
   display: block;
   clear: both;
+}
+
+body {
+  font-family: 'Raleway';
+}
+
+.font {
+  font-family: 'Lato';
+}
+
+img {
+  vertical-align: bottom;
+}
+
+a {
+  cursor: none;
+  text-decoration: none;
 }
 
 /* 幅の指定と中央寄せ */
@@ -23,13 +35,12 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 100;
   background-color: #fff;
 }
 
-
 .header-inner {
   padding: 15px 0;
-  z-index: 100;
 }
 
 /* 雷マーク */
@@ -52,7 +63,6 @@
   padding: 14px 12px;
   background-color: #74cfae;
   transition: color .3s ease;
-  cursor: pointer;
 }
 
 .header-contact:hover {
@@ -61,14 +71,15 @@
 
 /* Bolt Theme */
 main {
-  width: 100%;
+  margin-top: 90px;
 }
+
 .bolt{
   background-color: #f2f2f2;
 }
 
 .bolt-inner {
-  padding-top: 340px;
+  padding-top: 250px;
   padding-bottom: 250px;
 }
 
@@ -90,23 +101,27 @@ main {
 .section-first {
   background-color: #74cfae;
 }
+
 .section-first-inner {
   padding-top: 50px;
 }
 
 .section-first-left {
   float: left;
+  width: 400px;
+  text-align: center;
 }
 
 .section-first-right {
   float: right; 
+  width: 700px;
   text-align: center;
   color: #fff;
 }
 
 .section-first-right h2 {
   font-size: 24px;
-  padding-bottom:35px;
+  margin-bottom:35px;
   color: #fff;
 }
 
@@ -151,11 +166,11 @@ main {
   margin-left: 0;
 }
 
-.images a:nth-child(4n) {
+.images a:nth-child(3n+1) {
   margin-left: 0;
 }
 
-.images a:nth-child(n+4) {
+.images a:nth-last-child(-n+3) {
   margin-bottom: 0;
 }
 
@@ -236,6 +251,9 @@ main {
 /* sns */
 .sns {
   background-color: #f2f2f2;
+}
+
+.sns-inner {
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -245,7 +263,7 @@ main {
   justify-content: center;
 }
 
-.sns-icon {
+.sns-content a{
   font-size: 50px;
   text-align: center;
   padding: 30px 0;
@@ -255,7 +273,7 @@ main {
   transition: background .3s ease;
 }
 
-.sns-icon:hover {
+.sns-content a:hover {
   opacity: 1;
   background-color: #fff;
 }
@@ -264,13 +282,15 @@ main {
 .footer {
   width: 100%;
   background-color: #74cfae;
+}
+
+.footer-inner {
   padding-top: 20px;
   padding-bottom: 25px;
-  margin-bottom: 50px;
 }
 
 .footer-text {
-  float: right;
   font-size: 8px;
+  text-align: right;
   color: #fff;
 }
