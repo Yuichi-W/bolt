@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+<!-- font-size変えようとした時の -->
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
-    <title>Bolt - Free Bootstrap 3 Theme</title>
     <meta name="description" content="This is my portfolio site.">
     <meta name="keywords" content="bolt, bootstrap, portfolio">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no”">
+    <title>Bolt - Free Bootstrap 3 Theme</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
@@ -15,9 +16,10 @@
   </head>
   <body>
      <!-- header -->
-    <header class="header clearfix">    
-        <div class="inner header-inner">
-            <i class="fas fa-bolt"></i>
+    <header class="header">    
+        <div class="inner header-inner clearfix">
+            <i class="fas fa-bolt thunder"></i>
+            <i class="fas fa-bars menu"></i>
             <a hrf="" class="header-contact">Contact</a>
         </div>    
     </header>
@@ -33,22 +35,21 @@
       </div>
 
       <!-- section-first -->
-      <div class="section-first clearfix">
-        <div class="inner section-first-inner">
-          <section>
+      <section class="section-first">
+        <div class="inner section-first-inner clearfix">
+          <div class="section-first-left">
             <img class="iphone" src="./img/iphone.png" alt="iphone">
-            <div class="section-first-text">
-              <h2>「WHAT WE CAN DO?」</h2>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            </div>
-          </section>
+          </div>
+          <div class="section-first-right">
+            <h2>「WHAT WE CAN DO?」</h2>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum has been the industry's standard dummy text ever since the<br> 1500s, when an unknown printer took a galley of type and scrambled it to<br> make a type specimen book.</p>
+          </div>
         </div>
-      </div>    
+      </section>    
         
       <!-- article -->
-      <div class="article">
+      <article class="article">
         <div class="inner article-inner">
-          <article class="article-content">
             <h2>「OUR LATEST WORK」</h2>
             <div class="images">
               <img src="./img/01.jpg" alt="01" class="images_img">
@@ -58,18 +59,16 @@
               <img src="./img/05.jpg" alt="05" class="images_img">
               <img src="./img/06.jpg" alt="06" class="images_img">
             </div>
-            <div class="article-text">
+            <div class="article-text clearfix">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting<br> industry. Lorem Ipsum has been the industry's standard dummy<br> text ever.</p>
               <a href="" class="article-email">Email Mel</a>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
             </div>
-          </article>
         </div>
-      </div>   
+      </article>   
 
       <!-- section-second -->
-      <div class="section-second">
-        <div class="inner section-second-inner">
-          <section class="section-second-circle">
+        <section class="section-second-circle">
+          <div class="inner section-second-inner">
             <h2>「OUR SKILLS」</h2>
             <div class="images-circle">
               <div>
@@ -89,9 +88,8 @@
                 <p>Photoshop</p>
               </div>
             </div>
-          </section>
-        </div>
-      </div> 
+          </div>
+        </section>
 
       <!-- sns -->
       <div class="sns">
@@ -101,13 +99,13 @@
                 <i class="fab fa-facebook-f sns-icon"></i>
               </a>
               <a href="">
-                <i class="fas fa-basketball-ball sns-icon"></i>
+                  <i class="fab fa-dribbble sns-icon"></i>
               </a>
               <a href="">
                 <i class="fab fa-twitter sns-icon"></i>
               </a>
               <a href="">
-                  <i class="fas fa-envelope sns-icon"></i>
+                <i class="fas fa-envelope sns-icon"></i>
               </a>
             </ul>
           </navi>

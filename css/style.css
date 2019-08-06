@@ -5,26 +5,46 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
 
 
-/* 背景白のheader */
+/* float使用のためclearfix */
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
 
+/* 幅の指定と中央寄せ */
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+/* 背景色と幅いっぱい */
 .header {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 15px 0;
-  margin: 0 auto;
-  z-index: 1;
   background-color: #fff;
 }
 
+
+.header-inner {
+  padding: 15px 0;
+  z-index: 1;
+}
+
 /* 雷マーク */
-.fas {
+.thunder {
   float:left;
   color: gray;
   font-size: 60px;
 }
 
-/* content */
+/* メニューマーク */
+.menu {
+  visibility: hidden;
+}
+
+/* contact */
 .header-contact {
   float: right;
   color: #fff;
@@ -39,23 +59,10 @@
   color: #333;
 }
 
-/* float使用のためclearfix */
-.clearfix::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
+/* Bolt Theme */
 main {
   width: 100%;
 }
-
-.inner {
-  width: 1100px;
-  margin: 0 auto;
-}
-
-/* Bolt Theme */
 .bolt{
   background-color: #f2f2f2;
 }
@@ -82,41 +89,44 @@ main {
 /* section-first */
 .section-first {
   background-color: #74cfae;
+}
+.section-first-inner {
   padding-top: 50px;
 }
 
-.iphone {
+.section-first-left {
   float: left;
 }
 
-.section-first-text {
-  float: right;
-  width: 800px;
+.section-first-right {
+  float: right; 
+  text-align: center;
+  color: #fff;
 }
 
-.section-first-text h2 {
+.section-first-right h2 {
   font-size: 24px;
-  text-align: center;
   padding-bottom:35px;
   color: #fff;
 }
 
-.section-first-text p {
-  font-size: 20px;
-  text-align: center;
-  line-height: 40px;
+.section-first-right p {
   color: #fff;
-  word-break: break-all;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 /* images */
 .article {
   background-color: #f2f2f2;
+}
+
+.article-inner {
   padding-top: 60px;
   padding-bottom: 70px;
 }
 
-.article-content h2 {
+.article h2 {
   font-size: 24px;
   text-align: center;
   margin-bottom: 40px;
@@ -124,8 +134,9 @@ main {
 }
 
 .images {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .images img {
@@ -155,8 +166,15 @@ main {
   margin-top: 90px;
 }
 
+.article p {
+  float: left;
+  line-height: 30px;
+  text-align: center;
+  word-break: break-all;
+}
+
 .article-email {
-  float: right;
+  float: left;
   padding: 14px 20px;
   color: #fff;
   background-color: #74cfae;
@@ -169,15 +187,12 @@ main {
   color: #333;
 }
 
-.article-content p {
-  display: flex;
-  text-align: center;
-  word-break: break-all;
+/* circle-images */
+.section-second-circle {
+  background-color: #4e4e4e;
 }
 
-/* circle-images */
-.section-second {
-  background-color: #4e4e4e;
+.section-second-inner {
   padding-top: 70px;
   padding-bottom: 100px;
 }
@@ -191,6 +206,7 @@ main {
 
 .images-circle {
   display: flex;
+  justify-content: center;
 }
 
 .images_img {
@@ -199,7 +215,7 @@ main {
 }
 
 .images-circle div {
-  margin-left: 160px;
+  margin-left: 180px;
   text-align: center;
 }
 
@@ -208,7 +224,6 @@ main {
 }
 
 .images-circle p {
-  font-size: 16px;
   color: #fff;
   text-align: center;
 }
@@ -251,7 +266,6 @@ main {
 
 .footer-text {
   float: right;
-  /* margin-left: 70%; */
   font-size: 8px;
   color: #fff;
 }
