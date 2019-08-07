@@ -291,7 +291,6 @@ main {
     opacity: 1;
     background-color: #fff;
   }
-  
 }
  
 /*　----------画面サイズ 768pxから1199pxまで適用----------　*/
@@ -340,7 +339,6 @@ main {
   
   .images a {
     opacity: 0.7;
-    transition: opacity .3s ease;
   }
 
   .images li:nth-child(3n) {
@@ -349,10 +347,6 @@ main {
 
   .images li:last-child {
     margin-bottom: 0;
-  }
-
-  .images a:hover {
-    opacity: 1;
   }
 
   .article-text {
@@ -370,10 +364,6 @@ main {
     margin-left: 0;
   }
 
-  .section-second-circle {
-    background-color: #4e4e4e;
-  }
-
   .images-circle  {
     display: inline-block;
   }
@@ -381,7 +371,7 @@ main {
   .images-circle figure {
     text-align: center;
     margin-left: 0;
-    margin-bottom: 60px;
+    margin-bottom: 88px;
   }
 
   .images-circle figure:last-child {
@@ -452,7 +442,6 @@ main {
   
   .images a {
     opacity: 0.7;
-    transition: opacity .3s ease;
   }
 
   .images li:nth-child(3n) {
@@ -462,11 +451,7 @@ main {
   .images li:last-child {
     margin-bottom: 0;
   }
-
-  .images a:hover {
-    opacity: 1;
-  }
-
+  
   .article-text {
     margin-top: 80px;
   }
@@ -482,10 +467,6 @@ main {
     margin-left: 0;
   }
 
-  .section-second-circle {
-    background-color: #4e4e4e;
-  }
-
   .images-circle  {
     display: inline-block;
   }
@@ -493,7 +474,7 @@ main {
   .images-circle figure {
     text-align: center;
     margin-left: 0;
-    margin-bottom: 60px;
+    margin-bottom: 88px;
   }
 
   .images-circle figure:last-child {
