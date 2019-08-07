@@ -48,7 +48,7 @@ a {
   font-size: 60px;
 }
 
-.header a{
+.header-nav {
   float: right;
 }
 
@@ -58,6 +58,10 @@ a {
   padding: 14px 12px;
   background-color: #74cfae;
   transition: color .3s ease;
+}
+
+.header-menu {
+  display: none;
 }
 
 main {
@@ -108,13 +112,13 @@ main {
   color: #fff;
 }
 
-.section-first-right h2 {
+.iphone-title  {
   font-size: 24px;
   margin-bottom:35px;
   color: #fff;
 }
 
-.section-first-right p {
+.iphone-text {
   color: #fff;
   font-size: 20px;
   line-height: 30px;
@@ -129,38 +133,42 @@ main {
   padding-bottom: 70px;
 }
 
-.article h2 {
+.article-title {
   font-size: 24px;
   text-align: center;
   margin-bottom: 40px;
   color: #333;
 }
 
-.images ul {
+.images-content {
   display: flex;
   flex-wrap: wrap;
 }
 
-.article-text {
+.article-content {
   margin-top: 90px;
   text-align: center;
 }
 
-.article p {
+.images-list-img {
+  opacity: 0.7;
+  transition: opacity .3s ease;
+}
+
+.article-text {
   display: inline-block;
   line-height: 30px;
   text-align: center;
   width: 500px;
 }
 
-.article-text a {
+.article-email {
   display: inline-block;
   padding: 14px 20px;
   font-size: 12px;
   color: #fff;
   background-color: #74cfae;
   margin-left: 90px;
-  text-decoration:none;
   vertical-align: top;
   transition: color .3s ease;
 }
@@ -190,16 +198,16 @@ main {
   box-sizing: border-box;
 }
 
-.images-circle figure {
+.circle-list {
   margin-left: 180px;
   text-align: center;
 }
 
-.images-circle figure:first-child {
+.circle-list:first-child {
   margin-left: 0;
 }
 
-.images-circle figcaption {
+.circle-text {
   font-size: 16px;
   margin-top: 20px;
   color: #fff;
@@ -220,7 +228,7 @@ main {
   justify-content: center;
 }
 
-.sns-content a{
+.sns-list{
   font-size: 50px;
   text-align: center;
   padding: 30px 0;
@@ -230,7 +238,7 @@ main {
   transition: background-color .3s ease;
 }
 
-.sns-content a:hover {
+.sns-list:hover {
   opacity: 1;
   background-color: #fff;
 }
@@ -253,56 +261,38 @@ main {
 /*　------------画面サイズ 1200px以上から適用------------　*/
 @media screen and (min-width:1200px) {
 
-  .menu {
-    visibility: hidden;
-  }
-
-  .header a:hover {
+  .header-nav:hover {
     color: #333;
   }
 
-  .images li {
+  .images-list {
     margin-left: 100px;
     margin-top:80px;
   }
   
-  .images a {
-    opacity: 0.7;
-    transition: opacity .3s ease;
-  }
-  
-  .images li:nth-child(3n+1) {
+  .images-list:nth-child(3n+1) {
     margin-left: 0;
   }
   
-  .images li:nth-child(-n+3) {
+  .images-list:nth-child(-n+3) {
     margin-top: 0;
   }
 
-  .images li a:hover {
+  .images-list-img:hover {
     opacity: 1;
   }
 
-  .article-text a:hover {
+  .article-email:hover {
     color: #333;
   }
 
-  .sns-content a:hover {
-    opacity: 1;
-    background-color: #fff;
-  }
 }
  
 /*　----------画面サイズ 768pxから1199pxまで適用----------　*/
 @media screen and (min-width: 768px) and (max-width: 1199px) {
 
-  .menu {
-    visibility: hidden;
-  }
-
   .inner {
     width: 97%;
-    margin: 0 auto;
     text-align: center;
   }
 
@@ -315,37 +305,29 @@ main {
   }
 
   .section-first-left {
-    float: none;
     width: 100%;
     margin-bottom: 20px;
   }
   
   .section-first-right {
-    float: none;
-    text-align: center;
     width: 100%;
   }
   
-  .section-first-right p {
+  .iphone-text {
     width: 80%;
     margin: 0 auto;
-    line-height: 25px;
   }
 
-  .images ul {
+  .images-content {
     display: inline-block;
     margin-bottom: 0;
   }
-  
-  .images a {
-    opacity: 0.7;
-  }
 
-  .images li:nth-child(3n) {
+  .images-list:nth-child(3n) {
     margin-bottom: 80px;
   }
 
-  .images li:last-child {
+  .images-list:last-child {
     margin-bottom: 0;
   }
 
@@ -353,14 +335,14 @@ main {
     margin-top: 80px;
   }
 
-  .article p {
+  .article-text {
     display: inline-block;
     width: 100%;
     margin-bottom: 40px;
     line-height: 25px;
   }
   
-  .article-text a {
+  .article-email {
     margin-left: 0;
   }
 
@@ -368,13 +350,13 @@ main {
     display: inline-block;
   }
 
-  .images-circle figure {
+  .circle-list {
     text-align: center;
     margin-left: 0;
     margin-bottom: 88px;
   }
 
-  .images-circle figure:last-child {
+  .circle-list:last-child {
     margin-bottom: 0;
   }
 
@@ -388,7 +370,6 @@ main {
   
   .inner {
     width: 97%;
-    margin: 0 auto;
     text-align: center;
   }
 
@@ -396,7 +377,8 @@ main {
     display: none;
   }
   
-  .menu {
+  .header-menu {
+    display: block;
     font-size: 30px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -418,52 +400,44 @@ main {
   }
 
   .section-first-left {
-    float: none;
     width: 100%;
     margin-bottom: 20px;
   }
   
   .section-first-right {
-    float: none;
-    text-align: center;
     width: 100%;
   }
   
-  .section-first-right p {
+  .iphone-text {
     width: 80%;
     margin: 0 auto;
-    line-height: 25px;
   }
   
-  .images ul {
+  .images-content {
     display: inline-block;
     margin-bottom: 0;
   }
-  
-  .images a {
-    opacity: 0.7;
-  }
 
-  .images li:nth-child(3n) {
+  .images-list:nth-child(3n) {
     margin-bottom: 80px;
   }
 
-  .images li:last-child {
+  .images-list:last-child {
     margin-bottom: 0;
   }
-  
+
   .article-text {
     margin-top: 80px;
   }
 
-  .article p {
+  .article-text {
     display: inline-block;
     width: 100%;
     margin-bottom: 40px;
     line-height: 25px;
   }
   
-  .article-text a {
+  .article-email {
     margin-left: 0;
   }
 
@@ -471,13 +445,13 @@ main {
     display: inline-block;
   }
 
-  .images-circle figure {
+  .circle-list {
     text-align: center;
     margin-left: 0;
     margin-bottom: 88px;
   }
 
-  .images-circle figure:last-child {
+  .circle-list:last-child {
     margin-bottom: 0;
   }
 
@@ -489,7 +463,7 @@ main {
     display: inline-block;
   }
   
-  .sns-content a{
+  .sns-list{
     display: inline-block;
     min-width: 100%;
     padding: 30px 0;
