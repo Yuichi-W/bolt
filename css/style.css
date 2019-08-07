@@ -1,296 +1,834 @@
+/* レスポンシブ完了スタイル */
+
 @charset "utf-8";
 
-/* float使用のためclearfix */
-.clearfix::after {
-  content: '';
-  display: block;
-  clear: both;
+
+/* ------------------レスポンシブ対応------------------ */
+
+/* --------------画面サイズ 767pxまで適用--------------　*/
+@media screen and (max-width: 767px) { 
+
+  /* float使用のためclearfix */
+  .clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  body {
+    font-family: 'Raleway';
+  }
+
+  .font {
+    font-family: 'Lato';
+  }
+
+  img {
+    vertical-align: bottom;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /* 幅の指定と中央寄せ */
+  .inner {
+    width: 97%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* 背景色と幅いっぱい */
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+  }
+
+  .header-inner {
+    padding: 15px 0;
+  }
+
+  /* 雷マーク */
+  .thunder {
+    float:left;
+    color: gray;
+    font-size: 60px;
+  }
+
+  /* メニューマーク */
+  .menu {
+    float: right;
+    font-size: 30px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: gray;
+    border-radius: 4px;
+    }
+
+  /* contact */
+  .header-contact {
+    display: none;
+  }
+
+  /* Bolt Theme */
+  main {
+    margin-top: 90px;
+  }
+
+  .bolt{
+    background-color: #f2f2f2;
+  }
+
+  .bolt-inner {
+    padding-top: 160px;
+    padding-bottom: 130px;
+  }
+
+  .bolt-text {
+    font-size: 80px;
+    font-weight: 700;
+    color: #74cfae;
+    margin-bottom: 20px;
+  }
+
+  .free {
+    font-size: 30px;
+    color: #c0c0c0;
+  }
+
+  /* section-first */
+  .section-first {
+    background-color: #74cfae;
+  }
+
+  .section-first-inner {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  .section-first-left {
+    margin-bottom: 20px;
+  }
+
+  .section-first-right {
+    color: #fff;
+  }
+
+  .section-first-right h2 {
+    font-size: 24px;
+    margin-bottom:40px;
+  }
+
+  .section-first-right p {
+    font-size: 25px;
+    line-height: 35px;
+    padding: 0 10px;
+  }
+
+  /* images */
+  .article {
+    background-color: #f2f2f2;
+  }
+
+  .article-inner {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+
+  .article h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #333;
+  }
+
+  .images ul{
+    list-style: none;
+    text-align: center;
+  }
+  
+  .images img {
+    display: inline-block;
+    width: 97%;
+    opacity: 0.7;
+    margin-bottom: 0;
+    transition: opacity .3s ease;
+  }
+
+  .images li:nth-child(3n) {
+    margin-bottom: 80px;
+  }
+
+  .images a:hover {
+    opacity: 1;
+  }
+
+  .article-text {
+    margin-top: 90px;
+  }
+
+  .article p {
+    display: inline-block;
+    margin-bottom: 50px;
+    line-height: 25px;
+  }
+
+  .article-email {
+    padding: 14px 20px;
+    color: #fff;
+    background-color: #74cfae;
+    text-decoration:none;
+    transition: color .3s ease;
+  }
+
+  .article-email:hover {
+    color: #333;
+  }
+
+  /* circle-images */
+  .section-second-circle {
+    background-color: #4e4e4e;
+  }
+
+  .section-second-inner {
+    padding-top: 70px;
+    padding-bottom: 100px;
+  }
+
+  .section-second-circle h2 {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .images-circle figure {
+    text-align: center;
+    margin-bottom: 88px;
+  }
+
+  .images-circle figure:last-child {
+    margin-bottom: 0;
+  }
+  
+  .images-circle img {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .images-circle figcaption {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+  }
+
+  /* sns */
+  .sns {
+    background-color: #f2f2f2;
+  }
+
+  .sns-inner {
+    padding: 50px 0;
+  }
+
+  .sns-content {
+    margin: 0 auto;
+  }
+
+  .sns-content a{
+    display: inline-block;
+    font-size: 50px;
+    padding: 30px 0;
+    width: 100%;
+    color:#74cfae;
+    opacity: 0.7;
+    transition: background .3s ease;
+  }
+
+  .sns-content a:hover {
+    opacity: 1;
+    background-color: #fff;
+  }
+
+  /* footer */
+  .footer {
+    width: 100%;
+    background-color: #74cfae;
+  }
+
+  .footer-inner {
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+
+  .footer-text {
+    text-align: right;
+    color: #fff;
+  }
 }
 
-body {
-  font-family: 'Raleway';
+/*　----------画面サイズ 768pxから1199pxまで適用----------　*/
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+
+    /* float使用のためclearfix */
+    .clearfix::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  
+    body {
+      font-family: 'Raleway';
+    }
+  
+    .font {
+      font-family: 'Lato';
+    }
+  
+    img {
+      vertical-align: bottom;
+    }
+  
+    a {
+      text-decoration: none;
+    }
+  
+    /* 幅の指定と中央寄せ */
+    .inner {
+      width: 97%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    /* 背景色と幅いっぱい */
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background-color: #fff;
+    }
+  
+    .header-inner {
+      padding: 15px 0;
+    }
+  
+    /* 雷マーク */
+    .thunder {
+      float:left;
+      color: gray;
+      font-size: 60px;
+    }
+
+    /* メニューマーク */
+    .menu {
+      float: right;
+      font-size: 30px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      color: gray;
+      border-radius: 4px;
+      }
+
+    /* contact */
+    .header-contact {
+      display: none;
+    }
+  
+    /* Bolt Theme */
+    main {
+      margin-top: 90px;
+    }
+  
+    .bolt{
+      background-color: #f2f2f2;
+    }
+  
+    .bolt-inner {
+      padding-top: 250px;
+      padding-bottom: 250px;
+    }
+  
+    .bolt-text {
+      font-size: 80px;
+      font-weight: 700;
+      color: #74cfae;
+      margin-bottom: 20px;
+    }
+  
+    .free {
+      font-size: 30px;
+      color: #c0c0c0;
+    }
+  
+    /* section-first */
+    .section-first {
+      background-color: #74cfae;
+    }
+  
+    .section-first-inner {
+      padding-top: 50px;
+      padding-bottom: 25px;
+    }
+  
+    .section-first-left {
+      margin-bottom: 20px;
+    }
+  
+    .section-first-right {
+      color: #fff;
+    }
+  
+    .section-first-right h2 {
+      font-size: 24px;
+      margin-bottom:35px;
+    }
+  
+    .section-first-right p {
+      font-size: 20px;
+      line-height: 25px;
+      padding: 0 100px;
+    }
+  
+    /* images */
+    .article {
+      background-color: #f2f2f2;
+    }
+  
+    .article-inner {
+      padding-top: 60px;
+      padding-bottom: 70px;
+    }
+  
+    .article h2 {
+      font-size: 24px;
+      margin-bottom: 40px;
+      color: #333;
+    }
+    
+    .images ul{
+      list-style: none;
+      text-align: center;
+    }
+    
+    .images img {
+      display: inline-block;
+      opacity: 0.7;
+      margin-bottom: 0;
+      transition: opacity .3s ease;
+    }
+  
+    .images li:nth-child(3n) {
+      margin-bottom: 80px;
+    }
+  
+    .images li:hover {
+      opacity: 1;
+    }
+  
+    .article-text {
+    }
+  
+    .article p {
+      display: inline-block;
+      margin-bottom: 40px;
+      line-height: 25px;
+    }
+    
+    .article-email {
+      display: inline-block;
+      padding: 14px 20px;
+      color: #fff;
+      background-color: #74cfae;
+      text-decoration:none;
+      transition: color .3s ease;
+    }
+  
+    .article-email:hover {
+      color: #333;
+    }
+  
+    /* circle-images */
+    .section-second-circle {
+      background-color: #4e4e4e;
+    }
+  
+    .section-second-inner {
+      padding-top: 70px;
+      padding-bottom: 100px;
+    }
+  
+    .section-second-circle h2 {
+      font-size: 24px;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  
+    .images-circle figure {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+  
+    .images-circle figure:last-child {
+      margin-bottom: 0;
+    }
+    
+    .images-circle img {
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+  
+    .images-circle figcaption {
+      font-size: 16px;
+      color: #fff;
+      text-align: center;
+    }
+  
+    /* sns */
+    .sns {
+      background-color: #f2f2f2;
+    }
+  
+    .sns-inner {
+      padding: 200px 0;
+    }
+  
+    .sns-content {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .sns-content a{
+      display: inline-block;
+      font-size: 50px;
+      padding: 30px 0;
+      width: 185px;
+      color:#74cfae;
+      opacity: 0.7;
+      transition: background .3s ease;
+    }
+  
+    .sns-content a:hover {
+      opacity: 1;
+      background-color: #fff;
+    }
+  
+    /* footer */
+    .footer {
+      width: 100%;
+      background-color: #74cfae;
+    }
+  
+    .footer-inner {
+      padding-top: 20px;
+      padding-bottom: 25px;
+    }
+  
+    .footer-text {
+      text-align: right;
+      color: #fff;
+    }
 }
 
-.font {
-  font-family: 'Lato';
+
+
+/*　------------画面サイズ 1200px以上から適用------------　*/
+
+@media screen and (min-width:1200px) {
+
+  /* float使用のためclearfix */
+  .clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  body {
+    font-family: 'Raleway';
+  }
+
+  .font {
+    font-family: 'Lato';
+  }
+
+  img {
+    vertical-align: bottom;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /* 幅の指定と中央寄せ */
+  .inner {
+    width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* 背景色と幅いっぱい */
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+  }
+
+  .header-inner {
+    padding: 15px 0;
+  }
+
+  /* 雷マーク */
+  .thunder {
+    float:left;
+    color: gray;
+    font-size: 60px;
+  }
+
+  /* メニューマーク */
+  .menu {
+    visibility: hidden;
+  }
+
+  /* contact */
+  .header-contact {
+    float: right;
+    color: #fff;
+    font-size: 12px;
+    padding: 14px 12px;
+    background-color: #74cfae;
+    transition: color .3s ease;
+  }
+
+  .header-contact:hover {
+    color: #333;
+  }
+
+  /* Bolt Theme */
+  main {
+    margin-top: 90px;
+  }
+
+  .bolt{
+    background-color: #f2f2f2;
+  }
+
+  .bolt-inner {
+    padding-top: 250px;
+    padding-bottom: 250px;
+  }
+
+  .bolt-text {
+    font-size: 90px;
+    font-weight: 700;
+    color: #74cfae;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .free {
+    font-size: 30px;
+    color: #c0c0c0;
+    text-align: center;
+  }
+
+  /* section-first */
+  .section-first {
+    background-color: #74cfae;
+  }
+
+  .section-first-inner {
+    padding-top: 50px;
+  }
+
+  .section-first-left {
+    float: left;
+    width: 400px;
+    text-align: center;
+  }
+
+  .section-first-right {
+    float: right; 
+    width: 650px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .section-first-right h2 {
+    font-size: 24px;
+    margin-bottom:35px;
+    color: #fff;
+  }
+
+  .section-first-right p {
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  /* images */
+  .article {
+    background-color: #f2f2f2;
+  }
+
+  .article-inner {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+
+  .article h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+  }
+
+  .images ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .images li {
+    margin-left: 100px;
+    margin-top:80px;
+    opacity: 0.7;
+    transition: opacity .3s ease;
+  }
+
+  .images li:nth-child(3n+1) {
+    margin-left: 0;
+  }
+
+  .images li:nth-child(-n+3) {
+    margin-top: 0;
+  }
+
+  .images li:hover {
+    opacity: 1;
+  }
+
+  .article-text {
+    margin-top: 90px;
+    text-align: center;
+  }
+
+  .article p {
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    width: 500px;
+  }
+
+  .article-email {
+    display: inline-block;
+    padding: 14px 20px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #74cfae;
+    margin-left: 90px;
+    text-decoration:none;
+    vertical-align: top;
+    transition: color .3s ease;
+  }
+
+  .article-email:hover {
+    color: #333;
+  }
+
+  /* circle-images */
+  .section-second-circle {
+    background-color: #4e4e4e;
+  }
+
+  .section-second-inner {
+    padding-top: 70px;
+    padding-bottom: 100px;
+  }
+
+  .section-second-circle h2 {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .images-circle {
+    display: flex;
+    justify-content: center;
+  }
+
+  .images_img {
+    box-sizing: border-box;
+  }
+
+  .images-circle figure {
+    margin-left: 180px;
+    text-align: center;
+  }
+
+  .images-circle figure:first-child {
+    margin-left: 0;
+  }
+
+  .images-circle figcaption {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #fff;
+    text-align: center;
+  }
+
+  /* sns */
+  .sns {
+    background-color: #f2f2f2;
+  }
+
+  .sns-inner {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  .sns-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sns-content a{
+    font-size: 50px;
+    text-align: center;
+    padding: 30px 0;
+    width: 185px;
+    color:#74cfae;
+    opacity: 0.7;
+    transition: background .3s ease;
+  }
+
+  .sns-content a:hover {
+    opacity: 1;
+    background-color: #fff;
+  }
+
+  /* footer */
+  .footer {
+    width: 100%;
+    background-color: #74cfae;
+  }
+
+  .footer-inner {
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+
+  .footer-text {
+    text-align: right;
+    color: #fff;
+  }
 }
 
-img {
-  vertical-align: bottom;
-}
+/* ------------------レスポンシブ対応------------------ */
 
-a {
-  cursor: none;
-  text-decoration: none;
-}
 
-/* 幅の指定と中央寄せ */
-.inner {
-  width: 1100px;
-  margin: 0 auto;
-}
 
-/* 背景色と幅いっぱい */
-.header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-  background-color: #fff;
-}
 
-.header-inner {
-  padding: 15px 0;
-}
-
-/* 雷マーク */
-.thunder {
-  float:left;
-  color: gray;
-  font-size: 60px;
-}
-
-/* メニューマーク */
-.menu {
-  visibility: hidden;
-}
-
-/* contact */
-.header-contact {
-  float: right;
-  color: #fff;
-  font-size: 12px;
-  padding: 14px 12px;
-  background-color: #74cfae;
-  transition: color .3s ease;
-}
-
-.header-contact:hover {
-  color: #333;
-}
-
-/* Bolt Theme */
-main {
-  margin-top: 90px;
-}
-
-.bolt{
-  background-color: #f2f2f2;
-}
-
-.bolt-inner {
-  padding-top: 250px;
-  padding-bottom: 250px;
-}
-
-.bolt-text {
-  font-size: 90px;
-  font-weight: 700;
-  color: #74cfae;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.free {
-  font-size: 30px;
-  color: #c0c0c0;
-  text-align: center;
-}
-
-/* section-first */
-.section-first {
-  background-color: #74cfae;
-}
-
-.section-first-inner {
-  padding-top: 50px;
-}
-
-.section-first-left {
-  float: left;
-  width: 400px;
-  text-align: center;
-}
-
-.section-first-right {
-  float: right; 
-  width: 650px;
-  text-align: center;
-  color: #fff;
-}
-
-.section-first-right h2 {
-  font-size: 24px;
-  margin-bottom:35px;
-  color: #fff;
-}
-
-.section-first-right p {
-  color: #fff;
-  font-size: 20px;
-  line-height: 30px;
-}
-
-/* images */
-.article {
-  background-color: #f2f2f2;
-}
-
-.article-inner {
-  padding-top: 60px;
-  padding-bottom: 70px;
-}
-
-.article h2 {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 40px;
-  color: #333;
-}
-
-.images {
-  display: flex;
-  flex-wrap: wrap;
-  /* margin: 0 auto; */
-  justify-content: center;
-}
-
-.images a {
-  margin-left: 100px;
-  margin-bottom:80px;
-  opacity: 0.7;
-  transition: opacity .3s ease;
-}
-
-.images a:first-child {
-  margin-left: 0;
-}
-
-.images a:nth-child(3n+1) {
-  margin-left: 0;
-}
-
-.images a:nth-last-child(-n+3) {
-  margin-bottom: 0;
-}
-
-.images a:hover {
-  opacity: 1;
-}
-
-.article-text {
-  margin-top: 90px;
-  text-align: center;
-}
-
-.article p {
-  display: inline-block;
-  line-height: 30px;
-  text-align: center;
-  width: 500px;
-}
-
-.article-email {
-  display: inline-block;
-  padding: 14px 20px;
-  font-size: 12px;
-  color: #fff;
-  background-color: #74cfae;
-  margin-left: 90px;
-  text-decoration:none;
-  vertical-align: top;
-  transition: color .3s ease;
-}
-
-.article-email:hover {
-  color: #333;
-}
-
-/* circle-images */
-.section-second-circle {
-  background-color: #4e4e4e;
-}
-
-.section-second-inner {
-  padding-top: 70px;
-  padding-bottom: 100px;
-}
-
-.section-second-circle h2 {
-  font-size: 24px;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.images-circle {
-  display: flex;
-  justify-content: center;
-}
-
-.images_img {
-  box-sizing: border-box;
-}
-
-.images-circle figure {
-  margin-left: 180px;
-  text-align: center;
-}
-
-.images-circle figure:first-child {
-  margin-left: 0;
-}
-
-.images-circle figcaption {
-  font-size: 16px;
-  margin-top: 20px;
-  color: #fff;
-  text-align: center;
-}
-
-/* sns */
-.sns {
-  background-color: #f2f2f2;
-}
-
-.sns-inner {
-  padding-top: 200px;
-  padding-bottom: 200px;
-}
-
-.sns-content {
-  display: flex;
-  justify-content: center;
-}
-
-.sns-content a{
-  font-size: 50px;
-  text-align: center;
-  padding: 30px 0;
-  width: 185px;
-  color:#74cfae;
-  opacity: 0.7;
-  transition: background .3s ease;
-}
-
-.sns-content a:hover {
-  opacity: 1;
-  background-color: #fff;
-}
-
-/* footer */
-.footer {
-  width: 100%;
-  background-color: #74cfae;
-}
-
-.footer-inner {
-  padding-top: 20px;
-  padding-bottom: 25px;
-}
-
-.footer-text {
-  font-size: 8px;
-  text-align: right;
-  color: #fff;
-}
