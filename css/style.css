@@ -1,11 +1,8 @@
 /* レスポンシブ完了スタイル */
 
 @charset "utf-8";
-
-
-
 /* ------------------PC版のページ 共通------------------ */
-/* float使用のためclearfix */
+
 .clearfix::after {
   content: '';
   display: block;
@@ -33,7 +30,6 @@ a {
   margin: 0 auto;
 }
 
-/* 背景色と幅いっぱい */
 .header {
   position: fixed;
   top: 0;
@@ -46,14 +42,12 @@ a {
   padding: 15px 0;
 }
 
-/* 雷マーク */
 .thunder {
   float:left;
   color: gray;
   font-size: 60px;
 }
 
-/* contact */
 .header a{
   float: right;
 }
@@ -66,7 +60,6 @@ a {
   transition: color .3s ease;
 }
 
-/* Bolt Theme */
 main {
   margin-top: 90px;
 }
@@ -94,7 +87,6 @@ main {
   text-align: center;
 }
 
-/* section-first */
 .section-first {
   background-color: #74cfae;
 }
@@ -128,7 +120,6 @@ main {
   line-height: 30px;
 }
 
-/* images */
 .article {
   background-color: #f2f2f2;
 }
@@ -174,7 +165,6 @@ main {
   transition: color .3s ease;
 }
 
-/* circle-images */
 .section-second-circle {
   background-color: #4e4e4e;
 }
@@ -216,7 +206,6 @@ main {
   text-align: center;
 }
 
-/* sns */
 .sns {
   background-color: #f2f2f2;
 }
@@ -246,7 +235,6 @@ main {
   background-color: #fff;
 }
 
-/* footer */
 .footer {
   width: 100%;
   background-color: #74cfae;
@@ -261,15 +249,10 @@ main {
   text-align: right;
   color: #fff;
 }
-/* ------------------PC版のページ------------------ */
-
 
 /*　------------画面サイズ 1200px以上から適用------------　*/
 @media screen and (min-width:1200px) {
 
-  /* 幅の指定と中央寄せ */
-
-  /* メニューマーク隠す */
   .menu {
     visibility: hidden;
   }
@@ -318,19 +301,16 @@ main {
     visibility: hidden;
   }
 
-  /* 幅の指定と中央寄せ */
   .inner {
     width: 97%;
     margin: 0 auto;
     text-align: center;
   }
 
-  /* Bolt Theme */
   .bolt-text {
     font-size: 80px;
   }
 
-  /* section-first */
   .section-first-inner {
     padding-bottom: 25px;
   }
@@ -353,8 +333,6 @@ main {
     line-height: 25px;
   }
 
-  /* images */
-  
   .images ul {
     display: inline-block;
     margin-bottom: 0;
@@ -392,7 +370,6 @@ main {
     margin-left: 0;
   }
 
-  /* circle-images */
   .section-second-circle {
     background-color: #4e4e4e;
   }
@@ -410,25 +387,11 @@ main {
   .images-circle figure:last-child {
     margin-bottom: 0;
   }
-  
-  .images-circle img {
-    box-sizing: border-box;
-    margin-bottom: 20px;
-  }
 
-  .images-circle figcaption {
-    font-size: 16px;
-    color: #fff;
-    text-align: center;
-  }
-
-  /* sns */
   .sns-inner {
     padding: 200px 0;
   }
-
 }
-
 
 /* --------------画面サイズ 767pxまで適用--------------　*/
 @media screen and (max-width: 767px) { 
@@ -439,7 +402,6 @@ main {
     text-align: center;
   }
 
-  /* contact */
   .header-contact {
     display: none;
   }
@@ -537,19 +499,7 @@ main {
   .images-circle figure:last-child {
     margin-bottom: 0;
   }
-  
-  .images-circle img {
-    box-sizing: border-box;
-    margin-bottom: 20px;
-  }
 
-  .images-circle figcaption {
-    font-size: 16px;
-    color: #fff;
-    text-align: center;
-  }
-
-  /* sns */
   .sns-inner {
     padding: 50px 0;
   }
@@ -563,9 +513,7 @@ main {
     min-width: 100%;
     padding: 30px 0;
   }
-
 }
-
 /* ------------------レスポンシブ対応------------------ */
 
 
